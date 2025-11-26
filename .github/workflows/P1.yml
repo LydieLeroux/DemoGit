@@ -9,6 +9,7 @@ jobs:
       - name: First step
         run: echo "Hello world"
   job-bis:
+    needs: ["demo-job"]
     runs-on: ubuntu-slim
     steps:
       - name: Get Google infos
