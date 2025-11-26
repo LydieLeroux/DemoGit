@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Check files
-              run: run ls   
+              run: ls   
     build-app:
         runs-on: ubuntu-latest
         steps:
