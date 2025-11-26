@@ -8,3 +8,8 @@ jobs:
     steps:
       - name: First step
         run: echo "Hello world"
+  job-bis:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Get Google infos
+        run: curl https://google.com
