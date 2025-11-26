@@ -1,0 +1,27 @@
+name: Exo6
+
+on: workflow_dispatch
+
+jobs:
+  indep1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step A
+        run: echo "Je me présente je m'appelle Henri"
+  indep2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step B
+        run: echo "Je me présente je m'appelle Lucie"
+  dep11:
+    needs: [indep1]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step A A
+        run: echo "Je voudrais bien réussir ma vie"
+  dep21:
+    needs: [indep2]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step B A
+        run: echo "Je ne connais pas ta chanson Henri"
